@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>dp</title>
+    <meta name="description" content="dp演示稿" />
+    <meta name="theme-color" content="#f22148" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/logo.jpg" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reset.css" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/plugin/highlight/monokai.css" id="highlight-theme" />
+		<style>
+			.left {
+				text-align: left;
+			}
+		</style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-markdown="./pptmd/dp.md"
+          data-separator="^==="
+          data-separator-vertical="^---"
+        ></section>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/reveal.js@4.0.2/dist/reveal.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.0.2/plugin/zoom/zoom.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.0.2/plugin/notes/notes.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.0.2/plugin/search/search.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.0.2/plugin/markdown/markdown.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.0.2/plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight],
+      })
+    </script>
+  </body>
+</html>

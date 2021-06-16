@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ppt</title>
+    <meta name="description" content="ppt" />
+    <meta name="theme-color" content="#f22148" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/logo.jpg" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reset.css" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/reveal.js@4.0.2/dist/theme/black.css"
+      id="theme"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/reveal.js@4.0.2/plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <style>
+      .left {
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div id="md-warp" class="slides"></div>
+    </div>
+    <script src="https://unpkg.com/reveal.js@4.0.2/dist/reveal.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.0.2/plugin/zoom/zoom.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.0.2/plugin/notes/notes.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.0.2/plugin/search/search.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.0.2/plugin/markdown/markdown.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.0.2/plugin/highlight/highlight.js"></script>
+    <script>
+      const queryMatch = location.search.match(/[?&]md=([^&#]+)/i)
+      const name = decodeURIComponent((queryMatch && queryMatch[1]) || '')
+      const warp = document.getElementById('md-warp')
+      if (warp && name) {
+        const el = document.createElement('section')
+        el.setAttribute('data-markdown', `./pptmd/${name}.md`)
+        warp.appendChild(el)
+        document.title = name
+      }
+      Reveal.initialize({
+        controls: true,
+        controlsTutorial: true,
+        controlsLayout: 'bottom-right',
+        controlsBackArrows: 'faded',
+        transition: 'default',
+        transitionSpeed: 'default',
+        backgroundTransition: 'default',
+        progress: true,
+        center: true,
+        hash: true,
+        plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight],
+      })
+    </script>
+  </body>
+</html>

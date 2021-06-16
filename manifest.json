@@ -1,0 +1,9 @@
+{
+  "name": "opdev",
+  "short_name": "opdev",
+  "icons": [],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#f22148"
+}
